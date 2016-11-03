@@ -3,6 +3,7 @@ $(document).ready(function() {
 	
 	var usr, pwd;
 	
+	/* mocking data from JSON file */
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
 		xobj.overrideMimeType("application/json");
@@ -22,23 +23,33 @@ $(document).ready(function() {
 			usr = actual_JSON['username'];
 			pwd = actual_JSON['password'];
 	 });
-	
-	// $.getJSON( "mock/test.json", { name: "John", time: "2pm" } )
-// 	  .done(function( json ) {
-// 	    console.log( "JSON Data: " + json.users[ 3 ].name );
-// 	  })
-// 	  .fail(function( jqxhr, textStatus, error ) {
-// 	    var err = textStatus + ", " + error;
-// 	    console.log( "Request Failed: " + err );
-// 	});
+	 
+	/* Check if rememberMe has been ticked before */
+	if (Locstor.get('rememberMe') == true) {
+		$("#login-username:text").val(Locstor.get('username'));
+		$("#login-password:password").val(Locstor.get('password'));
+		$("#login-remember").prop('checked', true);
+	}
 
+
+	/* onClickListener for login button*/
 	$("#btn-login").click(function() {
 		var username = $("#login-username").val();
 		var password = $("#login-password").val();
 		
+		var rememberMe = $("#login-remember").is(':checked');
+		
 		// Checking for blank fields.
 		if( username == usr && password == pwd ){
-			alert("OK");
+			
+			var creditials = {
+				username: usr,
+				password: pwd,
+				rememberMe: rememberMe
+			};
+			Locstor.store(creditials);
+			
+			console.log("Success");
 		} else {
 			$("#login-alert").show( "slow" );
 		}
