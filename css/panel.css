@@ -61,3 +61,13 @@ code {
 	width: 100% !important;
 	padding: 5px;
 }
+
+.panel-footer.panel-custom {
+    background: white;
+    color: green;
+}
+
+.progress-bar.progress-bar-empty {
+	background: whitesmoke;
+	color: black;
+}

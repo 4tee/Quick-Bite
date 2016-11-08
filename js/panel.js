@@ -5,7 +5,6 @@ $(document).ready(function() {
 	$(function(){	
 		$("#navbar").load("hbg_menu.html"); 
 	});
-	
-	
+
 	
 });
