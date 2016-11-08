@@ -46,6 +46,18 @@ code {
 }
 
 .navbar-brand {
-	text-align: center;
-	width: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -50px !important;  /* 50% of your logo width */
+	display: block;
+}
+
+.navbar-left {
+  float: left;
+  margin-left: 15px;
+}
+
+.slider {
+	width: 100% !important;
+	padding: 5px;
 }
