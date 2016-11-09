@@ -1,0 +1,62 @@
+{"items": [
+ {
+   "title": "Lorem Ipsum 1",
+	 "progress": 88,
+   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+	 "feedback": false,
+	 "choice":-1,
+	 "statistics": [
+		 {
+			 "useful": 5,
+			 "somewhat_useful": 2,
+			 "somewhat_useless": 2,
+			 "useless": 1
+		 }
+	 ]
+ },
+ {
+   "title": "Lorem Ipsum 2",
+	 "progress": 0,
+   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+	 "feedback": false,
+	 "choice":-1,
+	 "statistics": [
+		 {
+			 "useful": 7,
+			 "somewhat_useful": 2,
+			 "somewhat_useless": 1,
+			 "useless": 0
+		 }
+	 ]
+ },
+ {
+   "title": "Lorem Ipsum 3",
+	 "progress": 100,
+   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+	 "feedback": true,
+	 "choice":0,
+	 "statistics": [
+		 {
+			 "useful": 6,
+			 "somewhat_useful": 2,
+			 "somewhat_useless": 1,
+			 "useless": 1
+		 }
+	 ]
+ },
+ {
+   "title": "Lorem Ipsum 4",
+	 "progress": 100,
+   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+	 "feedback": false,
+	 "choice":-1,
+	 "statistics": [
+		 {
+			 "useful": 6,
+			 "somewhat_useful": 2,
+			 "somewhat_useless": 0,
+			 "useless": 2
+		 }
+	 ]
+ }
+]}
