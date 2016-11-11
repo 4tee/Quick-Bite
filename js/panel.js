@@ -27,7 +27,7 @@ $(document).ready(function() {
 	  	// Parse JSON string into object	
 			var items = JSON.parse(response).items;
 						
-			if (Locstor.get('items') != null) {
+			if (Locstor.get('items') == null) {
 				Locstor.set('items', items.length);
 			
 				for (var i=0; i<items.length; i++) {
