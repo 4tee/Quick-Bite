@@ -1,12 +1,12 @@
 //panel screen
+var panelScript = {};
 $(document).ready(function() {
 
 	// side-loading of menu items
 	$(function(){	
 		$("#navbar").load("hbg_menu.html"); 
 	});
-
-
+	
 	/* mocking data from JSON file */
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	  	// Parse JSON string into object	
 			var items = JSON.parse(response).items;
 						
-			if (Locstor.get('items') == null) {
+			if (Locstor.get('items') != null) {
 				Locstor.set('items', items.length);
 			
 				for (var i=0; i<items.length; i++) {
@@ -41,23 +41,30 @@ $(document).ready(function() {
 				}
 			}
 			
-			createPanels();
+			//createPanels();
+			panelScript.create();
 	 });
 	 
 	 
+	 $(document).on("click", ".openModal", function() {
+	 	 var id = $(this).data('id');
+		 console.log('id: ' + id);
+	 });
+	 
 	 /* Styling and Customizing of Panel Footer in HTML */
-	 function makePanelFooterHtml(progress, feedback, choice, statistics) {
+	 function makePanelFooterHtml(index, progress, feedback, choice, statistics) {
 		 if (feedback) {
 			 // feedback already done
 			 var footerText;
 			 people = statistics.useful + statistics.somewhat_useful + statistics.somewhat_useless + statistics.useless;
 
+			 console.log(people + ' ' + choice + ' ' + statistics);
 			 //if it is already feedback; pull the statistics value based on choice; 0-indexed
 			 switch (choice) {
 				 	case 0: footerText = (statistics.useful/people * 100).toFixed(2) + '% people find it useful.'; break;
-			 		case 1: footerText = (statistics.somewhat_useful/people * 100).toFixed(2) + ' people find it somewhat useful.'; break;
-					case 2: footerText = (statistics.somewhat_useless/people * 100).toFixed(2) + ' people find it somewhat useless.'; break;
-					case 0: footerText = (statistics.useful/people * 100).toFixed(2) + ' people find it useless.'; break;
+			 		case 1: footerText = (statistics.somewhat_useful/people * 100).toFixed(2) + '% people find it somewhat useful.'; break;
+					case 2: footerText = (statistics.somewhat_useless/people * 100).toFixed(2) + '% people find it somewhat useless.'; break;
+					case 3: footerText = (statistics.useful/people * 100).toFixed(2) + '% people find it useless.'; break;
 			 }
 			 
 			 var footerHtml =
@@ -78,15 +85,28 @@ $(document).ready(function() {
 				 case 100: footerText =  'Give feedback'; break;
 				 default: footerText = 'Continue'; 
 			 }
-			 
-			 
-			 var footerHtml =
-			 	'<div class="panel-footer">' +
-		 			'<div class="input-group" data-toggle="modal" data-target="#popup">' +
-		 				'<i class="glyphicon glyphicon-circle-arrow-right" style="margin-right:5px;" ></i>' +
-		 				footerText +
-					'</div>' +
-			 	'</div>';
+			
+			 // Popup modal only when it is ready for feedback
+			 if (progress != 100) {
+	 				footerHtml = 
+	 			 	'<div class="panel-footer">' +
+	 		 			'<div class="openModal input-group" data-id="' + index + '">' +
+	 		 				'<i class="glyphicon glyphicon-circle-arrow-right" style="margin-right:5px;" ></i>' +
+	 		 				footerText +
+	 					'</div>' +
+	 			 	'</div>';
+			 } else {
+				 
+				 // set selected panel; it will then be handled at popup.js
+				 Locstor.set('selected_panel', index);
+	 				footerHtml = 
+	 			 	'<div class="panel-footer">' +
+	 		 			'<div class="openModal input-group" data-id="' + index + '" data-toggle="modal" data-target="#popup">' +
+	 		 				'<i class="glyphicon glyphicon-circle-arrow-right" style="margin-right:5px;" ></i>' +
+	 		 				footerText +
+	 					'</div>' +
+	 			 	'</div>';
+			 }
 					
 				return footerHtml;
 		 }
@@ -94,9 +114,9 @@ $(document).ready(function() {
 	 
 	 
 	 /* Build HTML panel code with the parameters given */
-	 function buildOnePanel(title, progress, text, feedback, choice, statistics) {
+	 function buildOnePanel(index, title, progress, text, feedback, choice, statistics) {
 		 
-		 var footerHtml = makePanelFooterHtml(progress, feedback, choice, statistics);
+		 var footerHtml = makePanelFooterHtml(index, progress, feedback, choice, statistics);
 		 var htmlCode = 
 		 	'<div class="panel panel-info">' +
 		 		'<div class="panel-heading">' +
@@ -124,7 +144,8 @@ $(document).ready(function() {
 	 
 	 
 	 /* create html panel dynamically */
-	 function createPanels() {
+	 
+	 panelScript.create = function createPanels() {
 		 
 		 var panels = '';
 		 var storedItems = Locstor.get('items');
@@ -142,7 +163,7 @@ $(document).ready(function() {
 				 useless: Locstor.get('items['+i+'].statistics.useless')
 			 };
 			 
-			 panels += buildOnePanel(title, progress, text, feedback, choice, statistics);
+			 panels += buildOnePanel(i, title, progress, text, feedback, choice, statistics);
 		 }
 		 
 		 document.getElementById("contentbox").innerHTML = panels;
