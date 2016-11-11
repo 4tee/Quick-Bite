@@ -18,6 +18,7 @@ $(document).ready(function() {
 	}
 	 
 	loadJSON(function(response) {
+		console.log('response: ' + response);
 	  // Parse JSON string into object
 	    var actual_JSON = JSON.parse(response);
 			usr = actual_JSON['username'];

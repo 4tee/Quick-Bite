@@ -22,6 +22,8 @@ $(document).ready(function() {
 	}
 	 
 	loadJSON(function(response) {
+		
+		console.log('response: ' + response);
 	  	// Parse JSON string into object	
 			var items = JSON.parse(response).items;
 						
