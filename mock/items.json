@@ -1,8 +1,8 @@
 {"items": [
  {
-   "title": "Lorem Ipsum 1",
-	 "progress": 88,
-   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+   "title": "CyberSecurity 101",
+	 "progress": 70,
+   "text": "This short awareness mobile learning module aims to equip you with the fundamentals of Cybersecurity.",
 	 "feedback": false,
 	 "choice":-1,
 	 "statistics": [
@@ -15,7 +15,7 @@
 	 ]
  },
  {
-   "title": "Lorem Ipsum 2",
+   "title": "CyberSecurity 102",
 	 "progress": 0,
    "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
 	 "feedback": false,

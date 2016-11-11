@@ -14,5 +14,9 @@ $(document).ready(function() {
 		navigationPosition: 'right'
 	});
 	
+	$("#retPanel").click(function() {
+		window.location.href = "./panel.html";
+	});
+	
 		// navigationTooltips: ['Cover', 'Second page', 'Third and last page']
 });
