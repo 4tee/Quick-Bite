@@ -11,7 +11,7 @@ $(document).ready(function() {
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
 		xobj.overrideMimeType("application/json");
-		xobj.open('GET', 'mock/items.json', true);
+		xobj.open('GET', '../mock/items.json', true);
 		xobj.onreadystatechange = function () {
 			if (xobj.readyState == 4 && xobj.status == "200") {
 				// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -48,7 +48,8 @@ $(document).ready(function() {
 	 
 	 $(document).on("click", ".openModal", function() {
 	 	 var id = $(this).data('id');
-		 console.log('id: ' + id);
+		 console.log('id:' + id);
+		 if (id == 0) window.location.href = "./cybersec101.html"
 	 });
 	 
 	 /* Styling and Customizing of Panel Footer in HTML */
@@ -57,8 +58,7 @@ $(document).ready(function() {
 			 // feedback already done
 			 var footerText;
 			 people = statistics.useful + statistics.somewhat_useful + statistics.somewhat_useless + statistics.useless;
-
-			 console.log(people + ' ' + choice + ' ' + statistics);
+			 
 			 //if it is already feedback; pull the statistics value based on choice; 0-indexed
 			 switch (choice) {
 				 	case 0: footerText = (statistics.useful/people * 100).toFixed(2) + '% people find it useful.'; break;

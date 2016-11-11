@@ -49,7 +49,7 @@ $(document).ready(function() {
 			};
 			Locstor.store(creditials);
 			
-			console.log("Success");
+			window.location.href = "./panel.html";
 		} else {
 			$("#login-alert").show( "slow" );
 		}
