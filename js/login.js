@@ -31,6 +31,7 @@ $(document).ready(function() {
 		$("#login-password:password").val(Locstor.get('password'));
 		$("#login-remember").prop('checked', true);
 	}
+	Locstor.clear(); // clear cache
 
 
 	/* onClickListener for login button*/
