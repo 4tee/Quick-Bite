@@ -71,3 +71,7 @@ code {
 	background: whitesmoke;
 	color: black;
 }
+
+.clickable {
+	cursor: pointer;
+}

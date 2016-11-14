@@ -92,10 +92,10 @@ $(document).ready(function() {
 			 if (progress != 100) {
 	 				footerHtml = 
 	 			 	'<div class="panel-footer">' +
-	 		 			'<div class="openModal input-group" data-id="' + index + '">' +
+	 		 			'<a class="openModal clickable input-group" data-id="' + index + '">' +
 	 		 				'<i class="glyphicon glyphicon-circle-arrow-right" style="margin-right:5px;" ></i>' +
 	 		 				footerText +
-	 					'</div>' +
+	 					'</a>' +
 	 			 	'</div>';
 			 } else {
 				 
@@ -103,10 +103,10 @@ $(document).ready(function() {
 				 Locstor.set('selected_panel', index);
 	 				footerHtml = 
 	 			 	'<div class="panel-footer">' +
-	 		 			'<div class="openModal input-group" data-id="' + index + '" data-toggle="modal" data-target="#popup">' +
+	 		 			'<a class="openModal clickable input-group" data-id="' + index + '" data-toggle="modal" data-target="#popup" href="#popup">' +
 	 		 				'<i class="glyphicon glyphicon-circle-arrow-right" style="margin-right:5px;" ></i>' +
 	 		 				footerText +
-	 					'</div>' +
+	 					'</a>' +
 	 			 	'</div>';
 			 }
 					
