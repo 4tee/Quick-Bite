@@ -4,6 +4,7 @@
 html,
 body {
   height: 100%;
+	font-size: 20px; /* 125% of the baseline */
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -75,4 +76,12 @@ body {
 	left:0;
 	width:100%;
 	height:100%;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.fp-enabled .modal{
+   position:fixed !important;
 }

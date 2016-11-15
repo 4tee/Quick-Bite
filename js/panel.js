@@ -122,7 +122,7 @@ $(document).ready(function() {
 		 var htmlCode = 
 		 	'<div class="panel panel-info">' +
 		 		'<div class="panel-heading">' +
-		 			'<div class="panel-title">' + title + '</div>' +
+		 			'<div class="panel-title"><strong>' + title + '</strong></div>' +
 				'</div>' +
 		 		'<div class="panel-body" >' +
 		 			'<div class="progress">' +
@@ -133,6 +133,7 @@ $(document).ready(function() {
 		 					'<span class="sr-only">' + (100-progress) + '%</span>' +
 		 				'</div>' +
 		 			'</div>' +
+		 			'<div class="small" style="color:gray">' + progress + '% completed.</div>' +
 		 			'<div id="text">' +
 		 				text +
 		 			'</div>' +

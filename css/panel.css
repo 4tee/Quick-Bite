@@ -4,9 +4,17 @@
 html,
 body {
   height: 100%;
+	font-size: 20px; /* 125% of the baseline */
   /* The html and body elements cannot have any padding or margin. */
 }
 
+.normal {
+	font-size: 16px; /*100% of the baseline */
+}
+
+.small {
+	font-size: 12px;
+}
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;

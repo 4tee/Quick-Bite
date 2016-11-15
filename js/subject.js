@@ -8,8 +8,8 @@ $(document).ready(function() {
 	
 	$('#fullpage').fullpage({
 		verticalCentered: true,
-		anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th'],
-		sectionsColor: ['#f5f5ff', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5ff'],
+		anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th', '13th', '14th'],
+		sectionsColor: ['#f5f5ff', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5f5', '#f5f5ff'],
 		navigation: true,
 		navigationPosition: 'right'
 	});
@@ -18,5 +18,9 @@ $(document).ready(function() {
 		window.location.href = "./panel.html";
 	});
 	
-		// navigationTooltips: ['Cover', 'Second page', 'Third and last page']
+ $(document).on("click", ".openModal", function() {
+ 	 $.fn.fullpage.setAllowScrolling(false);
+ });
+	
+	
 });

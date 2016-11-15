@@ -10,12 +10,14 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jquery.fullPage.css" rel="stylesheet">
   <link href="css/subject.css" rel="stylesheet">
+	<link href="css/popup.css" rel="stylesheet">
 	
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 	<script src='js/locstor.min.js'></script>
 	<script src='js/jquery.fullPage.min.js'></script>
 	<script src='js/subject.js'></script>
+	<script src='js/quiz.js'></script>
 
 </head>
 <body>
@@ -31,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><b>PICO</b></a>
+          <a class="navbar-brand" href="#">QUICK BITE</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <!-- load hgb_menu.html here -->
@@ -45,7 +47,7 @@
 				<div class="section center" id="section0">
 					<div>
 						<h2>CyberSecurity 101</h2>
-						<p>an awareness module</p>
+						<pagex>an awareness module</p>
 					</div>
 				</div>
 				
@@ -60,6 +62,12 @@
 						</div>
 				</div>
 				
+				<div class="section center" id="section0">
+					<div>
+						<h2>Why Cyber Security 101?</h2>
+					</div>
+				</div>
+				
 				<div class="section" id="sectionX">
 					<div>
 						<h2>Possibilities in the Information Age</h2>
@@ -72,17 +80,24 @@
 				
 				<div class="section" id="sectionX">
 					<div>
-						<h2>Many countries like our nation wants to become a Smart City</h2>
+						<h2>Many countries like Singapore wants to become a Smart City</h2>
 						<p>&nbsp;</p>
 						<div class="video-container">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/FYBPzJdNgmU" frameborder="0" allowfullscreen=""></iframe>
 						</div>
 					</div>
 				</div>
+						
+				<div class="section center" id="section0">
+					<div>
+						<button type="button" class="btn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz Time</button>
+						<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+					</div>
+				</div>
 				
 				<div class="section" id="sectionX">
 					<div>
-						<h2>Many countries like our nation wants to become a Smart City</h2>
+						<h2>To be a smart city, it also means that many devices need to be networked together and stay connected</h2>
 						<p>&nbsp;</p>
 						<img class="img-responsive" src="img/world_connectivity.png" alt="Chania" width="460" height="345">
 					</div>
@@ -90,7 +105,7 @@
 				
 				<div class="section" id="sectionX">
 					<div>
-						<h2>Let’s see what might happened to businesses when the world stay connected</h2>
+						<h2>Let’s see what might happen to businesses when the world stay connected</h2>
 						<p>&nbsp;</p>
 						<div class="video-container">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/LWi_ljAIhcM" frameborder="0" allowfullscreen=""></iframe>
@@ -98,15 +113,126 @@
 					</div>
 				</div>
 				
+				<div class="section" id="sectionX">
+					<div>
+						<h2>And what might happened to important infrastructure like power plant.</h2>
+						<p>&nbsp;</p>
+						<div class="video-container">
+							<iframe width="560" height="315" src="https://www.youtube.com/watch?v=7g0pi4J8auQ" frameborder="0" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section" id="sectionX">
+					<div>
+						<h3>In reality, human are using technology inappropriately/intentionally to mount attacks against government agencies, plants and facilities, businesses, individuals for different motives</h3>
+						<p>&nbsp;</p>
+						<img class="img-responsive" src="img/cyber.png" alt="Chania" width="460" height="345">
+					</div>
+				</div>
+				
+				<div class="section" id="sectionX">
+					<div>
+						<h3>These attacks have become more intensive in recent years and it is important that each of us are aware of Cybersecurity and play our parts in safeguarding our assets and contributing to the safety of the communities and societies.</h3>
+						<img class="img-responsive" src="img/security.png" alt="Chania" width="460" height="345">
+					</div>
+				</div>
+				
+				<div class="section center" id="section0">
+					<div>
+						<h2>Information Security Domains</h2>
+					</div>
+				</div>
+				
+				<div class="section" id="sectionX">
+					<div>
+						<h2>To make learning of Cybersecurity simpler, seven basic Security Domains were identified.</h2>
+						<p>&nbsp;</p>
+						<img class="img-responsive" src="img/seven_domains.png" alt="Chania" width="460" height="345">
+					</div>
+				</div>
+				
+				<div class="section center" id="section0">
+					<div style="background-image: url(img/background.png); height:100%">
+						<h2 style="color:white">
+						In the following sections, we shall look into   attacks in each of these domains. There are also crossed domain attacks as you would have thought about after watching the videos presented to you previously.
+						</h2>
+					</div>
+				</div>
+				
 				<div class="section center" id="section">
 					<div>
-						<h2>End of chapter</h2>
+						<h2>We have come to the end of this awareness module.</h2>
 						<p>&nbsp;</p>
-						<p id='retPanel'>Click here to return.</p>
+	 		 			<a data-rel="back" id="retPanel">
+	 		 				<i class="glyphicon glyphicon glyphicon-circle-arrow-left" style="margin-right:5px;" ></i>
+	 		 				Click here to return.
+	 					</a>
+						<!-- <p class="glyphicon glyphicon-menu-left" id='retPanel'>Click here to return.</p> -->
 					</div>
 				</div>
 				
 			</div> <!--fullpage-->
+			
+			
+			<!-- Modal -->
+			<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<!-- load popup.html here -->
+				
+			    <div class="vertical-alignment-helper container-fluid bg-info">
+			        <div class="modal-dialog vertical-align-center">
+			            <div class="modal-content">
+							<div class="modal-header">
+								<button type="button" id="closeBtn" class="close clickable" data-dismiss="modal">&times;</button>
+								<!-- <span class="label label-warning" id="qid">2</span> -->
+								<h4>Smart nation is an initiative started in</h4>
+							</div>
+										
+							<div class="modal-body">
+								<div class="col-xs-3 col-xs-offset-5">
+					               <div id="loadbar" style="display: none;">
+					                  <div class="blockG" id="rotateG_01"></div>
+					                  <div class="blockG" id="rotateG_02"></div>
+					                  <div class="blockG" id="rotateG_03"></div>
+					                  <div class="blockG" id="rotateG_04"></div>
+					                  <div class="blockG" id="rotateG_05"></div>
+					                  <div class="blockG" id="rotateG_06"></div>
+					                  <div class="blockG" id="rotateG_07"></div>
+					                  <div class="blockG" id="rotateG_08"></div>
+					              </div>
+								</div>
+
+								<div class="quiz" id="quiz" data-toggle="buttons">
+						           <label class="element-animation1 btn btn-lg btn-primary btn-block">
+									   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+									   <input type="radio" name="q_answer" value="2013">2013
+								   </label>
+						           <label class="element-animation2 btn btn-lg btn-primary btn-block">
+									   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+									   <input type="radio" name="q_answer" value="2020">2020
+								   </label>
+						           <label class="element-animation3 btn btn-lg btn-primary btn-block">
+									   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+									   <input type="radio" name="q_answer" value="2015">2015
+								   </label>
+						           <label class="element-animation4 btn btn-lg btn-primary btn-block">
+									   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
+									   <input type="radio" name="q_answer" value="2017">2017
+								   </label>
+						        </div>
+								
+								
+						   	</div> <!-- modal-body -->
+							
+						   	<div class="modal-footer">
+								<h4 class="text-left" id="answer"></h4>
+							</div>
+									
+						</div> <!-- modal-content -->
+			        </div> <!-- modal-dialog -->
+			    </div> <!-- vertical-alignment-helper -->
+				
+			</div> <!-- model -->
 			
 		</div> <!--container-->
 	</div>	
