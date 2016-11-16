@@ -2,7 +2,16 @@ $(document).ready(function() {
 
 	// side-loading of menu items
 	$(function(){	
-		$("#navbar").load("hbg_menu.html"); 
+		$("#navbar").load("hbg_menu.html");
+		
+		var i = Locstor.get('selected_panel');
+		console.log(i+' '+ Locstor.get('items['+i+'].progress'));
+		switch (Locstor.get('items['+i+'].progress')) {
+			case 10: $.fn.fullpage.moveTo(2); break;
+			case 20: $.fn.fullpage.moveTo(3); break;
+			case 50: $.fn.fullpage.moveTo(7); break;
+			case 80: $.fn.fullpage.moveTo(10); break;
+		}
 	});
 	
 	

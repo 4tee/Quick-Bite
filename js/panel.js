@@ -23,7 +23,6 @@ $(document).ready(function() {
 	 
 	loadJSON(function(response) {
 		
-		console.log('response: ' + response);
 	  	// Parse JSON string into object	
 			var items = JSON.parse(response).items;
 						
@@ -48,9 +47,10 @@ $(document).ready(function() {
 	 });
 	 
 	 
-	 $(document).on("click", ".openModal", function() {
+	 $(document).on("click", ".openModal, .panel-title", function() {
 	 	 var id = $(this).data('id');
-		 console.log('id:' + id);
+		 Locstor.set('selected_panel', id);
+		 console.log('id:' + Locstor.get('selected_panel'));
 		 if (id == 0) window.location.href = "./cybersec101.html"
 	 });
 	 
@@ -100,7 +100,7 @@ $(document).ready(function() {
 			 } else {
 				 
 				 // set selected panel; it will then be handled at popup.js
-				 Locstor.set('selected_panel', index);
+				 
 	 				footerHtml = 
 	 			 	'<div class="panel-footer">' +
 	 		 			'<a class="openModal clickable input-group" data-id="' + index + '" data-toggle="modal" data-target="#popup" href="#popup">' +
@@ -122,7 +122,7 @@ $(document).ready(function() {
 		 var htmlCode = 
 		 	'<div class="panel panel-info">' +
 		 		'<div class="panel-heading">' +
-		 			'<div class="panel-title"><strong>' + title + '</strong></div>' +
+		 			'<div class="panel-title clickable" data-id="'+index+'"><strong>' + title + '</strong></div>' +
 				'</div>' +
 		 		'<div class="panel-body" >' +
 		 			'<div class="progress">' +
