@@ -43,22 +43,22 @@ $(function(){
 						case "2013": {
 							var x = (statistics.choice1+1) / (people+1);
 							var newValue = (Math.round(100*x)/100).toFixed(2);
-							return 'Oops. This initiative was launched by Prime Minister Lee Shien Loong in 2015. About ' + newValue*100 + '% of people has same answer as you.';
+							return 'Oops. This initiative was launched by Prime Minister Lee Hsien Loong in 24 Nov 2014. About ' + newValue*100 + '% of people has same answer as you.';
 						}
 						case "2020": {
 							var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 							var newValue = (Math.round(100*x)/100).toFixed(2);
-							return 'Oops. This initiative was launched by Prime Minister Lee Shien Loong in 2015. About ' + newValue*100 + '% of people has same answer as you.';
+							return 'Oops. This initiative was launched by Prime Minister Lee Hsien Loong in 24 Nov 2014. About ' + newValue*100 + '% of people has same answer as you.';
 						}
-						case "2015": {
+						case "2014": {
 							var x = ((statistics.choice3+1) / (people+1)).toFixed(2);
 							var newValue = (Math.round(100*x)/100).toFixed(2);
-							return 'Great. This initiative was launched by Prime Minister Lee Shien Loong in 2015. About ' + newValue*100 + '% of people has same answer as you.';
+							return 'Great. This initiative was launched by Prime Minister Lee Hsien Loong in 24 Nov 2014. About ' + newValue*100 + '% of people has same answer as you.';
 						}
 						case "2017": {
 							var x = ((statistics.choice4+1) / (people+1)).toFixed(2);
 							var newValue = (Math.round(100*x)/100).toFixed(2);
-							return 'Oops. This initiative was launched by Prime Minister Lee Shien Loong in 2015. About ' + newValue*100 + '% of people has same answer as you.';
+							return 'Oops. This initiative was launched by Prime Minister Lee Hsien Loong in 24 Nov 2014. About ' + newValue*100 + '% of people has same answer as you.';
 						}
 						default: 
 							return 'Pick your choice';
