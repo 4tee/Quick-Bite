@@ -1,7 +1,7 @@
 {"items": [
  {
    "title": "CyberSecurity 101",
-	 "progress": 70,
+	 "progress": 20,
    "text": "This short awareness mobile learning module aims to equip you with the fundamentals of Cybersecurity.",
 	 "feedback": false,
 	 "choice":-1,
@@ -15,9 +15,9 @@
 	 ]
  },
  {
-   "title": "CyberSecurity 102",
+   "title": "Organization Domain Attacks",
 	 "progress": 0,
-   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+   "text": "Hackers had infiltrated the company’s corporate network using an email that tricked employees into opening a malicious attachment known generally as malware.",
 	 "feedback": false,
 	 "choice":-1,
 	 "statistics": [
@@ -30,9 +30,9 @@
 	 ]
  },
  {
-   "title": "Lorem Ipsum 3",
+   "title": "End-User Domain Attacks",
 	 "progress": 100,
-   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+   "text": "End users were often the greatest cybersecurity threat facing an organisation, either by accident, or using weak passwords.",
 	 "feedback": true,
 	 "choice":0,
 	 "statistics": [
@@ -45,9 +45,9 @@
 	 ]
  },
  {
-   "title": "Lorem Ipsum 4",
+   "title": "Physical Domain Attacks",
 	 "progress": 100,
-   "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+   "text": "The physical attack surface is the totality of the security vulnerabilities in a given system that are available to an attacker in the same location as the target.",
 	 "feedback": false,
 	 "choice":-1,
 	 "statistics": [
