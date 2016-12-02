@@ -4,7 +4,7 @@
 html,
 body {
   height: 100%;
-	font-size: 20px; /* 125% of the baseline */
+	font-size: 18px; /* 125% of the baseline */
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -84,4 +84,9 @@ body {
 
 .fp-enabled .modal{
    position:fixed !important;
+}
+
+.boxed {
+  border: 1px solid green ;
+  padding: 2px;
 }
