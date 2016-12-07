@@ -1,8 +1,8 @@
 {"items": [
  {
-   "title": "CyberSecurity 101",
-	 "progress": 20,
-   "text": "This short awareness mobile learning module aims to equip you with the fundamentals of Cybersecurity.",
+   "title": "Cyber Security @ Your Fingertips",
+	"progress": 0,
+   "text": "Learn the most common cyber security threats & the measures you can take to keep you safe on the internet.",
 	 "feedback": false,
 	 "choice":-1,
 	 "statistics": [

@@ -18,11 +18,10 @@
 	<script src='js/jquery.fullPage.min.js'></script>
 	<script src='js/subject.js'></script>
 	<script src='js/quiz.js'></script>
-
+		
 </head>
 <body>
 	<div id="wrap">	
-    <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -40,34 +39,36 @@
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
     </nav>
-		
-		<div class="container">
+	
+		<!-- <div class="container"> -->
 			
 			<div id="fullpage">
-				<div class="section center" id="section0">
-					<h2>CYBER SECURITY @ YOUR FINGERTIPS</h2>
-					<p>Learn the most common cyber security threats & the measures you can take to keep you safe on the internet</p>
+					
+				<div class="section center" id="section0" style="background-image: url(img/background.png); height:100%">
+					<h2>CYBER SECURITY @ YOUR FINGERTIPS</h2>					
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>How does cyber security affect you?</h2>
-					<p>&nbsp;</p>
+				<div class="section">
+					<h2 class="title-bottom-padding">How much do you know about cyber security?</h2>
 					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/_FM9vfK4Fxs" frameborder="0" allowfullscreen=""></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/sdpxddDzXfE" frameborder="0" allowfullscreen=""></iframe>
 					</div>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Outcome</h2>
-					<ul>
-					  <li><strong>IDENTIFY</strong><br/>Distinguish the various threats</li>
-					  <li><strong>ACTION</strong><br/>Take appropriate steps to address threats in a timely manner</li>
-					  <li><strong>GUARD</strong><br/>Identify measures to safe-guard against cyber security attacks</li>
+				<div class="section">
+					<h2 class="title-bottom-padding">Outcomes</h2>
+					<ul class="nolisttyle">
+					  <li><strong>IDENTIFY</strong></li>
+					  <li>Distinguish the various threats</li>
+					  <li class="toppadding"><strong>ACTION</strong></li>
+					  <li>Take appropriate steps to address threats in a timely manner</li>
+					  <li class="toppadding"><strong><!-- &#9679;  -->PROTECT</strong></li>
+					  <li>Identify measures to safe-guard against cyber security attacks</li>
 					</ul>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Course Information</h2>
+				<div class="section">
+					<h2 class="title-bottom-padding">Course Information</h2>
 					<table class="table table-condensed text-left">
 					    <tbody>
 					      <tr>
@@ -86,185 +87,208 @@
 				  	</table>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Lesson Outline</h2>
-					<ol>
-					  <li>Phishing</li>
-						<ul style="list-style-type:none">
-					    	<li>&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Awareness of threats</li>
-					      	<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice quiz</li>
-							<li>&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Incident handling</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice quiz</li>
-							<li>&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Security measures</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice quiz</li>
+				<div class="section">
+					<h2 class="title-bottom-padding">Lesson Outline</h2>
+					<ol class="nolisttyle">
+					  <li>1.Phishing</li>
+						<ul class="nolisttyleforsub">
+					    	<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Awareness of Threats</li>
+					      	<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
+							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
+							<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Incident Handling</li>
+							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
+							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
+							<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Security Measures</li>
+							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
+							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
 						</ul>
 					  </li>
-					  <li>Data Attacks</li>
-					  <li>Ransomeware</li>
-					  <li>Device Penetration Attacks</li>
+					  <li class="toppadding">2.Data Attacks</li>
+					  <li class="toppadding">3.Ransomeware</li>
+					  <li class="toppadding">4.Device Penetration Attacks</li>
 					</ol>
 				</div>
 				
 				
-				<div class="section" id="sectionX">
-					<h2>Awareness of Threats</h2>
-					<p>In this section, we will discuss what phishing attacks are?</p>
-					<div class="video-container">
+				<div class="section">
+					<h2 class="title-bottom-padding">Awareness of Threats</h2>
+					<p>In this section, we will discuss about phishing attacks.</p>
+					<div class="video-container toppadding">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/WpaLmeHTp3I" frameborder="0" allowfullscreen=""></iframe>
 					</div>
 				</div>
 						
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz1" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 1</button>
-					</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Awareness of Threats</h2>
+					<button type="button" id="quiz1" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 1</button>
+					<button type="button" id="quiz2" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 2</button>
+					<button type="button" id="quiz3" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 3</button>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz2" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 2</button>
-					</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary</h2>
+					<strong>What are phishing attacks?</strong>
+					<p>Phishing attacks are techniques used by cybercriminals to con users/employees into revealing sensitive information or installing malware by way of electronic communication.</p>
+					<img class="img-responsive" src="img/summary1.png" alt="Summary" width="460" height="345">
+					<p>&nbsp;</p>
+					<a href="https://offgridweb.com/survival/infographic-avoid-phishing-attacks-cybercrime/#"><i>Source</i></a>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz3" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 3</button>
-					</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary</h2>
+					<strong>How phishing works?</strong>
+					<img class="img-responsive" src="img/summary2.png" alt="Summary" width="460" height="345">
+					<p>&nbsp;</p>
+					<a href="https://ucldigifest.org/course/phishing-and-social-engineering/"><i>Source</i></a>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Incident Handling</h2>
-					<p>Under this section, we will talk about who do the users report to when they receive phishing email(s)?</p>
-					<p>In 2015, phishing emails purported to be from “support@gebiz.gov.sg”, are being sent to users. The contents of the email are as follows:</p>
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary</h2>
+					<strong>How does phishing affect you?</strong>
+					<img class="img-responsive" src="img/summary3.png" alt="Summary" width="460" height="345">
+					<p>&nbsp;</p>
+					<a href="https://ucldigifest.org/course/phishing-and-social-engineering/"><i>Source</i></a>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Incident Handling</h2>
-					<div class="boxed">
-					  Dear Partner,<br/><br/>
-					  The Infocomm Development Authority of Singapour (IDA) shared 
-					  that more than 530,000 users have completed their one-time account
-					  update since the enhenced SingnetPass was loaunnched last week.<br/><br/>
-					  If you fail to update  your Singnet Pass account, you will not be able to conduct any business.</br><br/>
-					  Click on the link below to update your SingnetPass account now</br><br/>
-					  http://update.sunsetgates.com/update/server/admindesk/index.htm
-					</div>
-					<p>What will happen if we click on the phishing url? Proceed to the next page.</p>
+				<div class="section">
+					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<p>In this section, we will learn how to report phishing.</p>
+					<p>In 2015, phishing emails purported to be from “support@gebiz.gov.sg”, are being sent to users. The content of the email is as follows:</p>
+					<button type="button" id="quiz5" class="btn btn-success openModal clickable toppadding" data-toggle="modal" data-target="#alertbox" href="#alertbox">View</button>
+					<p>&nbsp;</p>
+					<p>What will happen if you click on the phishing url? Proceed to the next page.</p>
+					<p>&nbsp;</p>
+					<a href="https://www.csa.gov.sg/singcert/news/advisories-alerts/phishing-emails-about-gebiz-and-singnet/"><i>Source</i></a>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Incident Handling</h2>
-					<div class="boxed">
-					  User credentials could be stolen if users enter in their username and password into the phishing page.
+				<div class="section">
+					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<div class="blue">
+					  User credentials could be stolen if users enter their username and password into the phishing page.
 					</div>
+					<p>&nbsp;</p>
 					<p>What should you do if you have received a phishing email? Proceed to the next page.</p>
+					<p>&nbsp;</p>
+					<a href="https://www.csa.gov.sg/singcert/news/advisories-alerts/phishing-emails-about-gebiz-and-singnet/"><i>Source</i></a>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Incident Handling</h2>
-					<div class="boxed">
-					  <ol>
-						  <li>Change your password immediately if you have entered in your user credentials to the phishing page.</li>
+				<div class="section">
+					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<div class="blue">
+					  <ol class="noindent">
+						  <li>Change your password immediately if you have entered your user credentials into the phishing page.</li>
 						  <li>If the same password is used across many services (e.g. Gmail, Hotmail, Yahoo), those services passwords must be changed as well.</li>
 						  <li>Do not click on the links in suspicious emails.</li>
 					  </ol>
 					</div>
+					<p>&nbsp;</p>
 					<p>Who do you report to when you receive a phishing message? Proceed to the next page.</p>
+					<p>&nbsp;</p>
+					<a href="https://www.csa.gov.sg/singcert/news/advisories-alerts/phishing-emails-about-gebiz-and-singnet/"><i>Source</i></a>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<h2>Incident Handling</h2>
-					<div class="boxed">
-					  <b>Do not respond to them or click on any hyperlink in the email.</b><br/><br/>
+				<div class="section">
+					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<div class="blue">
+					  <b>Do not respond to them or click on any hyperlink in the email.</b><br/>
 					  Anyone who has received a suspicious email, letter, SMS or phone call should immediately contact your ISP (Internet Service Provider) or your organisation’s IT administration department.</br></br>
 					  The organisation or person reporting the incident will need to send an email to SingCERT providing the following information:</br>
-					  <ol>
+					  <ol class="noindent">
 						  <li>Contact information including name, email addresses, telephone and fax numbers.</li>
 						  <li>Description of the incident including supporting logs and details such as source and targeted IP addresses, time of occurrence, parties involved and other relevant information</li>
 					  </ol>
 					</div>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz4" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 4</button>
+				<div class="section">
+					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<button type="button" id="quiz4" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 4</button>				
+				</div>
+				
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary</h2>
+					<p>If you receive an email that seems to be a phishing attempt, report it to:</p>
+					<img class="img-responsive" src="img/summary4.png" alt="Summary" width="460" height="345">
+				</div>
+				
+				<div class="section">
+					<h2 class="title-bottom-padding">Security Measures</h2>
+					<p>In this section, we will describe the various types of actions the users can use to prevent phishing scam(s).</p>
+					<div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/C6z-HadM258" frameborder="0" allowfullscreen=""></iframe>
 					</div>
 				</div>
 				
-				<div class="section" id="sectionX">
-					<div>
-						<h2>Security Measures</h2>
-						<p>In this section, we will describe the various types of actions the users can use to prevent phishing scam(s).</p>
-						<div class="video-container">
-							<iframe width="560" height="315" src="https://www.youtube.com/watch?v=C6z-HadM258" frameborder="0" allowfullscreen=""></iframe>
-						</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Security Measures</h2>
+					<div class="center">
+					<button type="button" id="quiz5" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 5</button>
+					<button type="button" id="quiz6" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 6</button>
+					<button type="button" id="quiz7" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 7</button>
 					</div>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz5" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 5</button>
-					</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary</h2>
+					<p>How to avoid phishing scams?</p>
+					<img class="img-responsive" src="img/summary5.png" alt="Summary" width="460" height="345">
+					<p>&nbsp;</p>
+					<a href="https://www.csa.gov.sg/singcert/news/advisories-alerts/phishing-emails-about-gebiz-and-singnet/"><i>Source</i></a>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz6" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 6</button>
-					</div>
+				<div class="section">
+					<h2 class="title-bottom-padding">Assignment</h2>
+					<p>Imagine you receive an email from a bank asking you to click a link and confirming some security questions. The link in the email looks like a legitimate website and the email even features the official bank logo.</p>
+					<p>
+						What would you do if you receive such an email?<br/>
+						<i>Hint: What should you do and how do you protect against such attacks in future?</i>
+						Post your answers in the discussion forum
+					</p>
 				</div>
 				
-				<div class="section center" id="section0">
-					<div>
-						<button type="button" id="quiz7" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 7</button>
-					</div>
-				</div>
-				
-				<div class="section" id="sectionX">
-					<p>Did you know that you can set up a reminder to remind you to update your antivirus & antiphishing software?</p> 
-					<p>If you like to receive a reminder, please click the button below.</p>
-					<button type="button" id="iamIn" class="btn btn-large btn-success">Set the reminder</button>
+				<div class="section">
+					<h2 class="title-bottom-padding">Security tips to help you stay safe online</h2>
+					<p>When you enrol in the learning management system, you will automatically receive a security tip on how to safeguard your password and how to protect your computer and data.</p> 
+					<button type="button" id="iamIn" class="btn btn-large btn-success">Yes, please send me Tip of the Day</button>
 					
 				</div>
 				
-				<div class="section" id="sectionX">
+				<!-- <div class="section">
+					<h2 class="title-bottom-padding">Community of Practice</h2>
+					<p>Does the LMS allow a discussion board for collaborative learning among the learners? The discussion board allows learning and creation of new knowledge within the community, hence enhance learners’ learning</p>
+				</div> -->
+				
+				<div class="section">
 					<div>
-						<h2>Summary</h2>
-						<p>&nbsp;</p>
+						<h2 class="title-bottom-padding">Your scorecard</h2>
 						<table class="table table-condensed text-left">
 						    <tbody>
+  						      <tr>
+  						        <td colspan="2">Total Score: <span style="font-weight: bold;">48%</span></td>
+  						      </tr>
 						      <tr>
 						        <td>Awareness of Threats</td>
 						        <td>20%</td>
 						      </tr>
 						      <tr>
 						        <td>Incident Handling</td>
-						        <td>22%</td>
+						        <td>12%</td>
 						      </tr>
 						      <tr>
 						        <td>Security Measures</td>
-						        <td>20%</td>
-						      </tr>
-						      <tr>
-						        <td>Assignment</td>
-						        <td>28%</td>
-						      </tr>
-						      <tr>
-						        <td colspan="2">Your Score: <span style="font-weight: bold;">90%</span></td>
+						        <td>16%</td>
 						      </tr>
 						  </tbody>
 					  	</table>
 					</div>
 				</div>
 				
-				<div class="section center" id="section">
-					<div>
-						<h2>We have come to the end.</h2>
-						<p>&nbsp;</p>
-	 		 			<a data-rel="back" id="retPanel">
-	 		 				<i class="glyphicon glyphicon glyphicon-circle-arrow-left" style="margin-right:5px;" ></i>
-	 		 				Click here to return.
-	 					</a>
-					</div>
+				<div class="section center">
+					<h2 class="title-bottom-padding">We have come to the end.</h2>
+ 		 			<a data-rel="back" id="retPanel">
+ 		 				<i class="glyphicon glyphicon glyphicon-circle-arrow-left" style="margin-right:5px;" ></i>
+ 		 				Click here to return.
+ 					</a>
 				</div>
 				
 			</div> <!--fullpage-->
@@ -337,7 +361,37 @@
 				
 			</div> <!-- model -->
 			
-		</div> <!--container-->
-	</div>	
+			
+			<div class="modal fade" id="alertbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<!-- load popup.html here -->
+				
+			    <div class="vertical-alignment-helper container-fluid bg-info">
+			        <div class="modal-dialog vertical-align-center">
+			            <div class="modal-content">
+							<!-- <div class="modal-header">
+								<button type="button" id="closeBtn" class="close clickable" data-dismiss="modal">&times;</button>
+							</div> -->
+										
+							<div class="modal-body">
+								<button type="button" id="closeBtn" class="close clickable" data-dismiss="modal">&times;</button>
+								<div class="blue">
+								  Dear Partner,<br/><br/>
+								  The Infocomm Development Authority of Singapour (IDA) shared 
+								  that more than 530,000 users have completed their one-time account
+								  update since the enhenced SingnetPass was loaunnched last week.<br/><br/>
+								  <strong>If you fail to update  your Singnet Pass account, you will not be able to conduct any business.</strong><br/><br/>
+								  Click on the <a href="http://update.sunsetgates.com/update/server/admindesk/index.htm">link</a> to update your SingnetPass account now.
+					  
+								</div>
+								
+						   	</div> <!-- modal-body -->	
+						</div> <!-- modal-content -->
+			        </div> <!-- modal-dialog -->
+			    </div> <!-- vertical-alignment-helper -->
+				
+			</div> <!-- model -->
+			
+		<!-- </div> --> <!--container-->
+	</div>
 </body>
 </html>

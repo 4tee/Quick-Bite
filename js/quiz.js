@@ -2,6 +2,15 @@ $(function(){
 	var selectedQuiz = "";
 	var shownOnce = false;
     var loading = $('#loadbar').hide();
+	var ansForQuiz = {
+		"quiz1": false,
+		"quiz2": false,
+		"quiz3": false,
+		"quiz4": false,
+		"quiz5": false,
+		"quiz6": false,
+		"quiz7": false
+	}
     
 	$(document)
     .ajaxStart(function () {
@@ -9,9 +18,26 @@ $(function(){
     }).ajaxStop(function () {
     	loading.hide();
     });
-		
+	
+	
+	$.fn.toggle = function(quizID) {
+		$(quizID).removeAttr('data-toggle');
+		$(quizID).removeClass("btn-danger");
+		$(quizID).addClass("disabled");
+		$(quizID).addClass("btn-default");
+	}
+	
 	$("#closeBtn").on('click', function() {
 		$.fn.fullpage.setAllowScrolling(true);
+		
+		if (ansForQuiz["quiz1"]) $(this).toggle('#quiz1');
+		if (ansForQuiz["quiz2"]) $(this).toggle('#quiz2');
+		if (ansForQuiz["quiz3"]) $(this).toggle('#quiz3');
+		if (ansForQuiz["quiz4"]) $(this).toggle('#quiz4');
+		if (ansForQuiz["quiz5"]) $(this).toggle('#quiz5');
+		if (ansForQuiz["quiz6"]) $(this).toggle('#quiz6');
+		if (ansForQuiz["quiz7"]) $(this).toggle('#quiz7');
+		
 	});
 
 	$(".quizBtn").on('click',function () {
@@ -52,14 +78,19 @@ $(function(){
 			}
 		}
 		else if (selectedQuiz == "quiz4") {
-			$("#question").text("What do we look for in a phishing email?");
-			$("#ch1").html("Spelling & grammar");
-			$("#ch2").html("Links in email");
-			$("#ch3").html("Popular company");
+			$("#question").text("What would you do if you suspect that an email you received is a phishing attempt?");
+			$("#ch1").html("Report it");
+			$("#ch2").html("Delete it immediately");
+			$("#ch3").html("Do not click links that appear in the message");
 			$("#ch4").html("All of the above");
 			
 			if (!shownOnce) {
-				$(".modal-header").append("<img class='img-responsive' src='img/accident_handling.png' alt='awareness' width='460' height='345'>");
+				$(".modal-header").append("<p>Hello!<br/>As part of our security measures, we regularly screen activity in the Facebook system."+
+				"We recently contacted you after noticing an issue on your account.<br/>Our system detected your unusual Copyrights activity " +
+				"linked to your Facebook account, please follow the link below to fill the Copyright Law form:</p>"+
+				"<a href='http://www.facebook.com/application_form'>Application Form</a>" +
+				"<p>Note: If you don’t fill the application your account will be permanently blocked.</p>"+
+				"<p>Regards,<br/>Facebook Copyrights Departement</p>");
 				shownOnce = true;
 			}
 		}
@@ -74,8 +105,8 @@ $(function(){
 			$("#question").text(
 				"You are a ‘very heavy’ user of mobile apps. You have apps that are being used by your kids for playing and learning. " +
 				"You have apps that you use in your leisure time for staying informed about what happens in your city. You have apps that you use to keep in touch with your friends."+
-				"Whenever you see an interesting app you want it and your instinct is just to download and install it. <br/><br/>" +
-				"However for ensuring your safety and security it is best to"
+				"Whenever you see an interesting app, you want it and your instinct is just to download and install it." +
+				"However, for ensuring your safety and security, it is best to"
 			);
 			$("#ch1").html("Make sure you do not incur hidden costs when downloading an app.");
 			$("#ch2").html("Check that the app comes from a reputable source.");
@@ -113,12 +144,14 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz1"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is TRUE. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz1"] = true;
+					return 'Oops. Answer is TRUE.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -133,12 +166,14 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is FALSE. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz2"] = true;
+					return 'Oops. Answer is FALSE.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz2"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -153,12 +188,14 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is Phishing. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz3"] = true;
+					return 'Oops. Answer is Phishing.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz3"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -173,22 +210,26 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is All of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz4"] = true;
+					return 'Oops. Answer is All of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is All of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz4"] = true;
+					return 'Oops. Answer is All of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice3": {
 					var x = ((statistics.choice3+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is All of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz4"] = true;
+					return 'Oops. Answer is All of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice4": {
 					var x = ((statistics.choice4+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz4"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -203,12 +244,14 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz5"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is TRUE. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz5"] = true;
+					return 'Oops. Answer is TRUE.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -223,17 +266,20 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is to get from reputable source. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz6"] = true;
+					return 'Oops. Answer is to get from reputable source.';//' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz6"] = true;
+					return 'You are right.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice3": {
 					var x = ((statistics.choice3+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is to get from reputable source. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz6"] = true;
+					return 'Oops. Answer is to get from reputable source.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
@@ -248,22 +294,26 @@ $(function(){
 				case "choice1": {
 					var x = ((statistics.choice1+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is all of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz7"] = true;
+					return 'Oops. Answer is all of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice2": {
 					var x = ((statistics.choice2+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is all of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz7"] = true;
+					return 'Oops. Answer is all of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice3": {
 					var x = ((statistics.choice3+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'Oops. Answer is all of the above. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz7"] = true;
+					return 'Oops. Answer is all of the above.'; //' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				case "choice4": {
 					var x = ((statistics.choice4+1) / (people+1)).toFixed(2);
 					var newValue = (Math.round(100*x)/100).toFixed(2);
-					return 'You are right. About ' + newValue*100 + '% of people has same answer as you.';
+					ansForQuiz["quiz7"] = true;
+					return 'You are right.';//' About ' + newValue*100 + '% of people has same answer as you.';
 				}
 				default: 
 					return 'Pick your choice';
