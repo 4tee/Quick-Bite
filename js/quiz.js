@@ -43,7 +43,7 @@ $(function(){
 	$(".quizBtn").on('click',function () {
 		if (this.id != "") selectedQuiz = this.id;
 		shownOnce = false;
-		$(".img-responsive").remove(); // remove the image
+		$("#quizImg").remove(); // remove the image
 	});
 	
 	$(".btn").on('click',function () {
@@ -73,7 +73,7 @@ $(function(){
 			$("#ch4").parent().addClass("hidden");
 			
 			if (!shownOnce) {
-				$(".modal-header").append("<img class='img-responsive' src='img/awareness_q3.png' alt='awareness' width='460' height='345'>");
+				$(".modal-header").append("<img id='quizImg' class='img-responsive' src='img/awareness_q3.png' alt='awareness' width='460' height='345'>");
 				shownOnce = true;
 			}
 		}
