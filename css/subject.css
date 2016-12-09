@@ -116,6 +116,23 @@ body {
 	color: blue;
 }
 
+.grey {
+	color: grey;
+}
+
 .p {
 	text-align: justify;
+}
+
+.table-borderless tbody tr td,
+.table-borderless tbody tr th,
+.table-borderless thead tr th,
+.table-borderless thead tr td,
+.table-borderless tfoot tr th,
+.table-borderless tfoot tr td {
+    border: none;
+}
+
+.glyphicon.glyphicon-envelope {
+    font-size: 40px;
 }

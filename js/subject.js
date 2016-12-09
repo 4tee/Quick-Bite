@@ -15,35 +15,66 @@ $(document).ready(function() {
 
 
 	$('#fullpage').fullpage({
+		anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th',
+		'11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', 'scorecard',
+		'end'],
 		verticalCentered: false,
-		anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', 
-		'11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', '20th', 
-		'21st', '22nd', '23rd'],
-		navigationTooltips: [
-			'', '', '', '', '', '', '', '', '', '', 
-			'', '', '', '', '', '', '', '','', '',
-			'', '', ''],
 		navigation: true,
-		showActiveTooltip: true,
 		navigationPosition: 'right',
-		css3: true
+		menu: '#menu',
+		onLeave: function(index, nextIndex, direction){
+	    	//console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+	    },
+	    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+	    	//console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+	    },
+	    afterRender: function(){
+	    	//console.log("afterRender");
+	    },
+	    afterResize: function(){
+	    	//console.log("afterResize");
+	    },
+	    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+	    	//console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+	    },
+	    afterLoad: function(anchorLink, index){
+			//console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index + " scorecard: " + userScore);
+			if (anchorLink == "scorecard") {
+				$("#user-score").text(userScore);
+			}
+	    }
 	});
-
+				
+				
 	$("#retPanel").click(function() {
 		window.location.href = "./panel.html";
 	});
 		
-	$("#iamIn").click(function() {
-		$("#iamIn").text('Registered');
-		$("#iamIn").removeClass('btn-success');
-		$("#iamIn").prop('disabled', true);
+	$("#dailyTip").click(function() {
+		$("#dailyTip").text('Registered');
+		$("#dailyTip").removeClass('btn-primary');
+		$("#dailyTip").prop('disabled', true);
 		
 		// Calling function to Android OS
-		Android.receiveMsg("Do not write down your password.");
-		
+		Android.receiveMsg("Tip of the day");
 	});
 	
-	 // $(document).on("click", ".openModal", function() {
-// 	 	 $.fn.fullpage.setAllowScrolling(false);
-// 	 });
+	$("#weeklyTip").click(function() {
+		$("#weeklyTip").text('Registered');
+		$("#weeklyTip").removeClass('btn-primary');
+		$("#weeklyTip").prop('disabled', true);
+		
+		// Calling function to Android OS
+		Android.receiveMsg("Tip of the week");
+	});
+	
+	$("#monthlyTip").click(function() {
+		$("#monthlyTip").text('Registered');
+		$("#monthlyTip").removeClass('btn-primary');
+		$("#monthlyTip").prop('disabled', true);
+		
+		// Calling function to Android OS
+		Android.receiveMsg("Tip of the month");
+	});
+	
 });

@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Small Step Learning</title>
+  	<title>Small Step Learning</title>
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/jquery.fullPage.css" rel="stylesheet">
-  <link href="css/subject.css" rel="stylesheet">
+  	<link href="css/subject.css" rel="stylesheet">
 	<link href="css/popup.css" rel="stylesheet">
 	
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src='js/locstor.min.js'></script>
 	<script src='js/jquery.fullPage.min.js'></script>
 	<script src='js/subject.js'></script>
 	<script src='js/quiz.js'></script>
+	<script type='text/javascript' > 
+		var selectedQuiz = "x";
+		var userScore = 0;
+		var shownOnce = false;
+	    var loading = $('#loadbar').hide();
+		var ansForQuiz = {
+			"quiz1": false,
+			"quiz2": false,
+			"quiz3": false,
+			"quiz4": false,
+			"quiz5": false,
+			"quiz6": false,
+			"quiz7": false
+		}
+	</script>
 		
 </head>
 <body>
@@ -45,24 +60,17 @@
 			<div id="fullpage">
 					
 				<div class="section center" id="section0" style="background-image: url(img/background.png); height:100%">
-					<h2>CYBER SECURITY @ YOUR FINGERTIPS</h2>					
+					<h2>How to stay safe online?</h2>					
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">How much do you know about cyber security?</h2>
-					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/sdpxddDzXfE" frameborder="0" allowfullscreen=""></iframe>
-					</div>
-				</div>
-				
-				<div class="section">
-					<h2 class="title-bottom-padding">Outcomes</h2>
+					<h2 class="title-bottom-padding">Outcomes(WIP)</h2>
 					<ul class="nolisttyle">
-					  <li><strong>IDENTIFY</strong></li>
+					  <li><strong>Identify</strong></li>
 					  <li>Distinguish the various threats</li>
-					  <li class="toppadding"><strong>ACTION</strong></li>
+					  <li class="toppadding"><strong>Response</strong></li>
 					  <li>Take appropriate steps to address threats in a timely manner</li>
-					  <li class="toppadding"><strong><!-- &#9679;  -->PROTECT</strong></li>
+					  <li class="toppadding"><strong>Protect</strong></li>
 					  <li>Identify measures to safe-guard against cyber security attacks</li>
 					</ul>
 				</div>
@@ -77,7 +85,7 @@
 					      </tr>
 					      <tr>
 					        <td><b>Commitment</b></td>
-					        <td>2 hours/week for 4 weeks</td>
+					        <td>1 hour</td>
 					      </tr>
 					      <tr>
 					        <td><b>Language</b></td>
@@ -89,40 +97,47 @@
 				
 				<div class="section">
 					<h2 class="title-bottom-padding">Lesson Outline</h2>
-					<ol class="nolisttyle">
-					  <li>1.Phishing</li>
-						<ul class="nolisttyleforsub">
-					    	<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Awareness of Threats</li>
-					      	<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
-							<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Incident Handling</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
-							<li class="toppadding">&#09;<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Security Measures</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Practice Quiz</li>
-							<li>&#09;<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Summary</li>
-						</ul>
-					  </li>
-					  <li class="toppadding">2.Data Attacks</li>
-					  <li class="toppadding">3.Ransomeware</li>
-					  <li class="toppadding">4.Device Penetration Attacks</li>
-					</ol>
+					<table class="table table-borderless table-condensed text-left">
+					    <tbody>
+					      <tr>
+					        <td  colspan="2"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> 
+								<strong>Identify</strong>
+							</td>
+					      </tr>
+					      <tr>
+					        <td>&#8226; Summary</td>
+					        <td>&#8226; Practice Quiz</td>
+					      </tr>
+					      <tr>
+					        <td colspan="2"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> 
+								<strong>Response</strong>
+							</td>
+					      </tr>
+					      <tr>
+					        <td colspan="2">&#8226; Practice Quiz</td>
+					      </tr>
+					      <tr>
+					        <td colspan="2"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> 
+								<strong>Protect</strong>
+							</td>
+					      </tr>
+					      <tr>
+					        <td>&#8226; Summary</td>
+					        <td>&#8226; Practice Quiz</td>
+					      </tr>
+					  </tbody>
+				  	</table>
+					
+					
 				</div>
 				
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Awareness of Threats</h2>
+					<h2 class="title-bottom-padding">Identify</h2>
 					<p>In this section, we will discuss about phishing attacks.</p>
 					<div class="video-container toppadding">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/WpaLmeHTp3I" frameborder="0" allowfullscreen=""></iframe>
 					</div>
-				</div>
-						
-				<div class="section">
-					<h2 class="title-bottom-padding">Awareness of Threats</h2>
-					<button type="button" id="quiz1" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 1</button>
-					<button type="button" id="quiz2" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 2</button>
-					<button type="button" id="quiz3" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 3</button>
 				</div>
 				
 				<div class="section">
@@ -135,7 +150,7 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Summary</h2>
+					<h2 class="title-bottom-padding">Summary (WIP)</h2>
 					<strong>How phishing works?</strong>
 					<img class="img-responsive" src="img/summary2.png" alt="Summary" width="460" height="345">
 					<p>&nbsp;</p>
@@ -149,12 +164,24 @@
 					<p>&nbsp;</p>
 					<a href="https://ucldigifest.org/course/phishing-and-social-engineering/"><i>Source</i></a>
 				</div>
+						
+				<div class="section">
+					<h2 class="title-bottom-padding">Identify</h2>
+					<p>There are <strong>3</strong> quizzes in this section.</p>
+					<button type="button" id="quiz1" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Begin Quizzes</button>
+					<!-- <button type="button" id="quiz1" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 1</button>
+					<button type="button" id="quiz2" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 2</button>
+					<button type="button" id="quiz3" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 3</button> -->
+				</div>
+				
+				
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<h2 class="title-bottom-padding">Response</h2>
 					<p>In this section, we will learn how to report phishing.</p>
 					<p>In 2015, phishing emails purported to be from “support@gebiz.gov.sg”, are being sent to users. The content of the email is as follows:</p>
-					<button type="button" id="quiz5" class="btn btn-success openModal clickable toppadding" data-toggle="modal" data-target="#alertbox" href="#alertbox">View</button>
+					<span class="glyphicon glyphicon-envelope openModal clickable" aria-hidden="true" data-toggle="modal" data-target="#alertbox" href="#alertbox"></span>
+					
 					<p>&nbsp;</p>
 					<p>What will happen if you click on the phishing url? Proceed to the next page.</p>
 					<p>&nbsp;</p>
@@ -162,7 +189,7 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<h2 class="title-bottom-padding">Response</h2>
 					<div class="blue">
 					  User credentials could be stolen if users enter their username and password into the phishing page.
 					</div>
@@ -173,12 +200,18 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<h2 class="title-bottom-padding">Response</h2>
+					<strong>If you have not clicked any link: </strong>
+					<div class="blue">
+					  <ul class="noindent">
+						  <li>Do not click on the links in suspicious emails.</li>
+					  </ul>
+					</div>
+					<strong>If you have clicked on a link: </strong>
 					<div class="blue">
 					  <ol class="noindent">
 						  <li>Change your password immediately if you have entered your user credentials into the phishing page.</li>
 						  <li>If the same password is used across many services (e.g. Gmail, Hotmail, Yahoo), those services passwords must be changed as well.</li>
-						  <li>Do not click on the links in suspicious emails.</li>
 					  </ol>
 					</div>
 					<p>&nbsp;</p>
@@ -188,7 +221,7 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Incident Handling</h2>
+					<h2 class="title-bottom-padding">Response (WIP)</h2>
 					<div>
 					  <b>Do not respond to them or click on any hyperlink in the email.</b><br/>
 					  Anyone who has received a suspicious email, letter, SMS or phone call should immediately contact your ISP (Internet Service Provider) or your organisation’s IT administration department.</br></br>
@@ -201,18 +234,14 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Incident Handling</h2>
-					<button type="button" id="quiz4" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 4</button>				
+					<h2 class="title-bottom-padding">Response</h2>
+					<p>There is <strong>1</strong> quiz in this section.</p>
+					<button type="button" id="quiz4" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" 
+					data-target="#popup" href="#popup">Quiz</button>				
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Summary</h2>
-					<p>If you receive an email that seems to be a phishing attempt, report it to:</p>
-					<img class="img-responsive" src="img/summary4.png" alt="Summary" width="460" height="345">
-				</div>
-				
-				<div class="section">
-					<h2 class="title-bottom-padding">Security Measures</h2>
+					<h2 class="title-bottom-padding">Protect</h2>
 					<p>In this section, we will describe the various types of actions the users can use to prevent phishing scam(s).</p>
 					<div class="video-container">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/C6z-HadM258" frameborder="0" allowfullscreen=""></iframe>
@@ -220,16 +249,34 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Security Measures</h2>
-					<div class="center">
-					<button type="button" id="quiz5" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 5</button>
-					<button type="button" id="quiz6" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 6</button>
-					<button type="button" id="quiz7" class="btn quizBtn btn-danger openModal clickable" data-toggle="modal" data-target="#popup" href="#popup">Quiz 7</button>
-					</div>
+					<h2 class="title-bottom-padding">Protect</h2>
+					<ol class="noindent">
+					  <li>Slow down</li>
+					  <li>Check for Errors</li>
+					  <li>Don't Reply</li>
+					  <li>Beware of Links</li>
+					  <li>Beware of Downloads</li>
+					  <li>Don't give Passwords</li>
+				  	</ol>
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Summary</h2>
+					<h2 class="title-bottom-padding">Security Measures</h2>
+					<p>There are <strong>3</strong> quizzes in this section.</p>
+					<button type="button" id="quiz5" class="btn quizBtn btn-danger openModal clickable" 
+					data-toggle="modal" data-target="#popup" href="#popup" data-backdrop="static" data-keyboard="false">Quizzes</button>
+					<!-- <div class="center">
+						<button type="button" id="quiz5" class="btn quizBtn btn-danger openModal clickable"
+						data-toggle="modal" data-target="#popup" href="#popup" data-backdrop="static" data-keyboard="false">Quiz 5</button>
+						<button type="button" id="quiz6" class="btn quizBtn btn-danger openModal clickable"
+						data-toggle="modal" data-target="#popup" href="#popup">Quiz 6</button>
+						<button type="button" id="quiz7" class="btn quizBtn btn-danger openModal clickable"
+						data-toggle="modal" data-target="#popup" href="#popup">Quiz 7</button>
+					</div> -->
+				</div>
+				
+				<div class="section">
+					<h2 class="title-bottom-padding">Summary (WIP)</h2>
 					<p>How to avoid phishing scams?</p>
 					<img class="img-responsive" src="img/summary5.png" alt="Summary" width="460" height="345">
 					<p>&nbsp;</p>
@@ -237,19 +284,14 @@
 				</div>
 				
 				<div class="section">
-					<h2 class="title-bottom-padding">Assignment</h2>
-					<p>Imagine you receive an email from a bank asking you to click a link and confirming some security questions. The link in the email looks like a legitimate website and the email even features the official bank logo.</p>
-					<p>
-						What would you do if you receive such an email?<br/>
-						<i>Hint: What should you do and how do you protect against such attacks in future?</i>
-						Post your answers in the discussion forum
-					</p>
-				</div>
-				
-				<div class="section">
 					<h2 class="title-bottom-padding">Security tips to help you stay safe online</h2>
 					<p>When you enrol in the learning management system, you will automatically receive a security tip on how to safeguard your password and how to protect your computer and data.</p> 
-					<button type="button" id="iamIn" class="btn btn-large btn-success">Yes, please send me Tip of the Day</button>
+					
+					<div>
+					<button id="dailyTip" class="btn btn-primary btn-block">Yes, please send me daily</button>
+					<button id="weeklyTip" class="btn btn-primary btn-block">Yes, please send me weekly</button>
+					<button id="monthlyTip" class="btn btn-primary btn-block">Yes, please send me monthly</button>
+					</div>
 					
 				</div>
 				
@@ -264,19 +306,22 @@
 						<table class="table table-condensed text-left">
 						    <tbody>
   						      <tr>
-  						        <td colspan="2">Total Score: <span style="font-weight: bold;">48%</span></td>
+  						        <td>You got  
+									<span id="user-score" style="font-weight: bold;">0</span> out of 
+									<span id="totalscore" style="font-weight: bold;">7</span> quizzes correct.
+								</td>
   						      </tr>
 						      <tr>
-						        <td>Awareness of Threats</td>
-						        <td>20%</td>
+						        <td>&nbsp;</td>
 						      </tr>
 						      <tr>
-						        <td>Incident Handling</td>
-						        <td>12%</td>
+						        <td>&#8226; Identify</td>
 						      </tr>
 						      <tr>
-						        <td>Security Measures</td>
-						        <td>16%</td>
+						        <td>&#8226; Response</td>
+						      </tr>
+						      <tr>
+						        <td>&#8226; Protect</td>
 						      </tr>
 						  </tbody>
 					  	</table>
@@ -284,10 +329,10 @@
 				</div>
 				
 				<div class="section center">
-					<h2 class="title-bottom-padding">We have come to the end.</h2>
+					<h2 class="title-bottom-padding">Congratulation, you have completed.</h2>
  		 			<a data-rel="back" id="retPanel">
  		 				<i class="glyphicon glyphicon glyphicon-circle-arrow-left" style="margin-right:5px;" ></i>
- 		 				Click here to return.
+ 		 				Click here for next topic - Ransomeware.
  					</a>
 				</div>
 				
@@ -295,15 +340,15 @@
 			
 			
 			<!-- Modal -->
-			<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade" id="popup" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<!-- load popup.html here -->
 				
 			    <div class="vertical-alignment-helper container-fluid bg-info">
 			        <div class="modal-dialog vertical-align-center">
 			            <div class="modal-content">
 							<div class="modal-header">
-								<button type="button" id="closeBtn" class="close clickable" data-dismiss="modal">&times;</button>
-								<h4 id="question">Phishing emails are fake emails that appear to come from legitimate sources?</h4>
+								<!-- <button type="button" id="closeBtn" class="close clickable" data-dismiss="modal">&times;</button> -->
+								<h4 id="question">Question?</h4>
 							</div>
 										
 							<div class="modal-body">
@@ -325,14 +370,14 @@
 									<label class="element-animation1 btn btn-lg btn-primary btn-block" for="choice1">
 										<input type="radio" id="choice1" name="q_answer" value="choice1"/>
 										<span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
-										<div id="ch1">True</div>
+										<div id="ch1">Option1</div>
 									</label>
 									
 									
 									<label class="element-animation1 btn btn-lg btn-primary btn-block" for="choice2">
 										<input type="radio" id="choice2" name="q_answer" value="choice2"/>
 										<span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> 
-										<div id="ch2">False</div>
+										<div id="ch2">Option2</div>
 									</label>
 									
 									<label class="element-animation1 btn btn-lg btn-primary btn-block" for="choice3">
@@ -353,6 +398,9 @@
 							
 						   	<div class="modal-footer">
 								<h4 class="text-left" id="answer"></h4>
+								<!-- <button type="button" id="prevBtn" class="clickable grey">Previous</button> -->
+								<button type="button" id="closeBtn" class="btn clickable grey" data-dismiss="modal">Close</button>
+								<button type="button" id="nextBtn" class="btn clickable grey">Next</button>
 							</div>
 									
 						</div> <!-- modal-content -->
