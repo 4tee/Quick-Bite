@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+	console.log("iOS" + iOS);
+	
+	if (iOS) $("#othersBtn").addClass("hidden");
+	else $("#iosBtns").addClass("hidden");
+
 	// side-loading of menu items
 	$(function(){	
 		$("#navbar").load("hbg_menu.html");
@@ -76,4 +82,32 @@ $(document).ready(function() {
 		Android.receiveMsg("Tip of the month");
 	});
 	
+	/* iOS functions */
+    $('.disabled').click(function(e){
+        e.preventDefault();
+     })
+	 
+	$("#iOSDailyTip").click(function() {
+		$("#iOSDailyTip").text('Registered');
+		$("#iOSDailyTip").removeClass('btn-primary');
+		$("#iOSDailyTip").addClass('btn-default');
+		$("#iOSDailyTip").addClass('disabled');
+		
+	});
+	
+	$("#iOSWeeklyTip").click(function() {
+		$("#iOSWeeklyTip").text('Registered');
+		$("#iOSWeeklyTip").removeClass('btn-primary');
+		$("#iOSWeeklyTip").addClass('btn-default');
+		$("#iOSWeeklyTip").addClass('disabled');
+		
+	});
+	
+	$("#iOSMonthlyTip").click(function() {
+		$("#iOSMonthlyTip").text('Registered');
+		$("#iOSMonthlyTip").removeClass('btn-primary');
+		$("#iOSMonthlyTip").addClass('btn-default');
+		$("#iOSMonthlyTip").addClass('disabled');
+		
+	});
 });
