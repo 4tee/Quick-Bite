@@ -123,7 +123,7 @@ $(function(){
 		else if (selectedQuiz == "quiz4") {
 			$("#question").text("What would you do if you suspect that an email you received is a phishing attempt?");
 			$("#ch1").html("Report it");
-			$("#ch2").html("Delete it immediately");
+			$("#ch2").html("Follow company's standard operating procedures and act on it");
 			$("#ch3").html("Do not click links that appear in the message");
 			$("#ch4").html("All of the above");
 			
